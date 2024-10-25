@@ -1,0 +1,39 @@
+/* Success Page Styles */
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: white;
+}
+
+.success-container {
+  text-align: center;
+}
+
+.success-icon {
+  width: 100px; /* Adjust based on your image size */
+  height: 100px; /* Adjust based on your image size */
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-size: 24px;
+}
+
+.next-btn {
+  padding: 10px 20px;
+  background-color: gold;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
+}
+
+.next-btn:hover {
+  background-color: rgb(255, 123, 35);
+}

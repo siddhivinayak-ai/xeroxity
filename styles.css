@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background color */
+  color: #333; /* Text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color for back arrow */
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.back-arrow:hover {
+  color: #f5c518; /* Change color on hover */
+}
+
+/* Form Container Styles */
+.form-container {
+  background-color: white; /* White background for the form */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+  padding: 20px; /* Padding inside the container */
+  width: 79%; /* Full width on mobile */
+  max-width: 400px; /* Maximum width for larger screens */
+  text-align: center; /* Center text */
+}
+
+.form-container h1 {
+  font-size: 1.8rem; /* Heading size */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+  width: 85%; /* Full width for inputs */
+  padding: 10px; /* Padding inside inputs */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1rem; /* Font size for inputs */
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #f5c518; /* Button background color */
+  color: black; /* Button text color */
+  border: none;
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2rem; /* Font size for button */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #e5b317; /* Darker yellow on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Error Message */
+.error-message {
+  color: red; /* Red color for error messages */
+  font-size: 0.9rem; /* Smaller font size */
+  margin-top: 10px; /* Space above error message */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .form-container h1 {
+      font-size: 1.5rem; /* Smaller font size */
+  }
+
+  .submit-btn {
+      font-size: 1rem; /* Smaller font size for buttons */
+  }
+}

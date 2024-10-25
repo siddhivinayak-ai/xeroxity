@@ -1,0 +1,81 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light background color */
+  color: #333; /* Text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header Styles */
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.back-arrow {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333; /* Color for back arrow */
+  padding: 10px;
+  transition: color 0.3s;
+}
+
+.back-arrow:hover {
+  color: #f5c518; /* Change color on hover */
+}
+
+/* User Type Container Styles */
+.user-type-container {
+  text-align: center;
+  margin-top: 50px; /* Margin from the top */
+}
+
+.user-type-container h1 {
+  font-size: 2rem; /* Responsive font size */
+  margin-bottom: 30px;
+   /* Space below the title */
+}
+
+/* User Type Buttons */
+.user-type-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between buttons */
+}
+
+.action-btn {
+  background-color: #f5c518; /* Button background color */
+  color: black; /* Button text color */
+  border: none;
+  padding: 15px 30px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 1.2rem; /* Responsive font size */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  width: 200px; /* Set a fixed width */
+}
+
+.action-btn:hover {
+  background-color: #e5b317; /* Darker yellow on hover */
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .action-btn {
+      width: 100%; /* Full width on small screens */
+      font-size: 1rem; /* Smaller font size */
+  }
+
+  .user-type-container h1 {
+      font-size: 1.5rem; /* Smaller font size */
+  }
+}

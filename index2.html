@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xeroxity</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+<header>
+    <div class="nav-container">
+        <!-- Logo on the left -->
+        <div class="logo">
+            <img src="logo.PNG" style="height: 50px; width: auto; border-radius: 8%;" alt="Logo">
+        </div>
+
+        <!-- Search bar and icons on the right -->
+        <div class="search-container">
+            <input type="text" id="search-input" class="hidden" placeholder="Search by shops, locations ..">
+            <i id="search-icon" class="ri-search-line search-icon"></i>
+            <i id="close-icon" class="ri-close-line hidden"></i>
+        </div>
+
+        <!-- Profile icon -->
+        <div class="profile-icon">
+            <i class="ri-user-line"></i>
+        </div>
+    </div>
+    
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+    <h1>Find Nearby Xerox Shops</h1>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Vendor Section: Available Vendors -->
+<section class="vendors">
+    <div class="vendor-container">
+        <h2 class="vendor-title">Available Vendors</h2>
+        <div id="vendor-list" class="vendor-list horizontal-scroll"></div>
+    </div>
+</section>
+
+<!-- Vendor Section: Popular Services -->
+<section class="vendors">
+    <div class="vendor-container">
+        <h2 class="vendor-title">Popular Services</h2>
+        <div id="popular-list" class="vendor-list horizontal-scroll"></div>
+    </div>
+</section>
+
+<!-- Vendor Section: Offers & Discounts -->
+<section class="vendors">
+    <div class="vendor-container">
+        <h2 class="vendor-title">Offers & Discounts</h2>
+        <div id="offers-list" class="vendor-list horizontal-scroll"></div>
+    </div>
+</section>
+
+<!-- Vendor Section: New Arrivals -->
+<section class="vendors">
+    <div class="vendor-container">
+        <h2 class="vendor-title">New Arrivals</h2>
+        <div id="new-arrivals-list" class="vendor-list horizontal-scroll"></div>
+    </div>
+</section>
+
+<nav class="bottom-nav">
+    <a href="index2.html" class="nav-item">
+        <i id="active" class="ri-home-4-line"></i>
+    </a>
+    <a href="order.html" class="nav-item">
+        <i class="ri-upload-2-line"></i>
+    </a>
+    <a href="order-his.html" class="nav-item">
+        <i class="ri-shopping-cart-line"></i>
+    </a>
+    <a href="profile.html" class="nav-item">
+        <i class="ri-user-line"></i>
+    </a>
+</nav>
+
+<script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <button onclick="goBack()" class="back-arrow">← Back</button>
+    </div>
+    <div class="form-container">
+        <h1>Vendor Registration</h1>
+        <form id="vendor-form">
+            <input type="text" id="shopName" placeholder="Shop Name" required>
+            <input type="text" id="shopAddress" placeholder="Shop Address" required>
+            <input type="email" id="vendorEmail" placeholder="Email" required>
+            <input type="tel" id="vendorPhone" placeholder="Phone" required>
+            <br>
+            <h1>Upload Shop Image:</h1>
+            <input type="file" id="vendorImage" placeholder="Upload Shop Image" accept="image/*" required>
+            <br>
+            <br>
+            <label for="services">Services:</label>
+            <br>
+            <select id="vendorServices" multiple>
+                <option value="Xerox">Xerox</option>
+                <option value="Bulk Printing">Bulk Printing</option>
+                <option value="Flyers">Flyers</option>
+                <option value="Banners">Banners</option>
+                <option value="Color Xerox">Color Xerox</option>
+            </select>
+
+          
+            <br>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

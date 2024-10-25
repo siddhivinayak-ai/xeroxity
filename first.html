@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select User Type</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+    <div class="header">
+        <!-- <button onclick="goBack()" class="back-arrow">← Back</button> -->
+    </div>
+    <div class="user-type-container">
+        <h1>Get started as:</h1>
+        <div class="user-type-buttons">
+            <button class="action-btn" onclick="registerAsCustomer()">Customer</button>
+            <button class="action-btn" onclick="registerAsVendor()">Vendor</button>
+            <button  style="background-color: transparent ;" class="action-btn" onclick="skip()">Skip </button>
+        </div>
+    </div>
+
+    <script>
+        function registerAsCustomer() {
+            window.location.href = 'user-form.html';
+        }
+
+        function registerAsVendor() {
+            window.location.href = 'vendor-form.html';
+        }
+
+        function skip() {
+            window.location.href = 'index2.html';
+        }
+
+
+        // function goBack() {
+        //     window.history.back();
+        // }
+    </script>
+</body>
+</html>

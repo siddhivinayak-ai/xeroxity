@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <button onclick="goBack()" class="back-arrow">← Back</button>
+    </div>
+    <div class="form-container">
+        <h1>User Registration</h1>
+        <form id="user-form">
+            <input type="text" id="userName" placeholder="Full Name" required>
+            <input type="email" id="userEmail" placeholder="Email" required>
+            <input type="tel" id="userPhone" placeholder="Phone" required pattern="[0-9]{10}">
+            <input type="password" id="userPassword" placeholder="Password" required minlength="6">
+            <button  class="submit-btn" type="submit" >Register</button>
+        </form>
+        <p id="error-message" class="error-message"></p>
+    </div>
+
+    <script src="user-form.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        } 
+
+      function goBack() {
+          window.history.back();
+      }
+
+
+
+
+     
+  </script>
+</body>
+</html>
