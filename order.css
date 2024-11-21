@@ -80,12 +80,12 @@ header {
 }
 
 .bottom-nav a {
-  color: #f5c518;
+  color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
 #active {
-  color: white;
+  color: #f5c518;
 }
 

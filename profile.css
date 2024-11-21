@@ -1,0 +1,270 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+  background-color: #f5c518;
+  color: #000;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Profile Container */
+.profile-container {
+  margin-top: 80px; /* Adjusted for space from the top bar */
+  margin-bottom: 70px; /* Adjusted for space from the bottom bar */
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #000000, #111111);
+  min-height: calc(100vh - 150px); /* Ensures content adjusts dynamically */
+}
+
+/* Profile Card */
+.profile-card {
+  background: #1c1c1c; /* Darker background for depth */
+  border: none;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px; /* Ensures consistency on larger screens */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-5px); /* Slight elevation on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Profile Image */
+.profile-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  border: 3px solid #f5c518; /* Bold border for highlight */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6); /* Shadow around image */
+}
+
+/* Profile Text */
+.profile-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  color: #f5c518;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.profile-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.profile-card p span {
+  color: #f5c518; /* Highlight role or important text */
+  font-weight: 600;
+}
+
+/* Button Styling */
+.profile-card button {
+  background: linear-gradient(145deg, #f5c518, #ffc400);
+  color: #1c1c1c;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-card button:hover {
+  background: linear-gradient(145deg, #f5c518, #f5c518);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .profile-card {
+    padding: 1.5rem;
+  }
+
+  .profile-card img {
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .profile-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-card p {
+    font-size: 0.9rem;
+  }
+
+  .profile-card button {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Bottom Navigation */
+  .bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .bottom-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  #active {
+    color: #f5c518;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Popup Styling */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.popup-content {
+  background-color: #111;
+  border: 1px solid #f5c518;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.popup-content input,
+.popup-content select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c518;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+.popup-content button {
+  background-color: #f5c518;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content button:hover {
+  background-color: #f5c518;
+}

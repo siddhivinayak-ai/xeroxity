@@ -78,7 +78,7 @@ header {
 .bottom-nav {
   display: flex;
   justify-content: space-around;
-  background-color: #333; /* Black */
+  background-color: black; /* Black */
   padding: 1rem 0;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -87,7 +87,7 @@ header {
 }
 
 .bottom-nav a {
-  color: #f5c518; /* Yellow */
+  color: white; /* Yellow */
   text-decoration: none;
   font-size: 1.2rem;
   transition: color 0.3s ease;
@@ -98,7 +98,7 @@ header {
 }
 
 #active {
-  color: white;
+  color: #f5c518;
 }
 
 @media (max-width: 600px) {

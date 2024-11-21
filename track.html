@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Location Tracker</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Top Navigation Bar */
+    .top-nav {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Map Container */
+    .map-container {
+      position: fixed;
+      top: 60px; /* Adjust based on top nav height */
+      bottom: 60px; /* Adjust based on bottom nav height */
+      width: 100%;
+    }
+
+  /* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+#active {
+  color: #f5c518;
+}
+
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <div class="top-nav">
+    <h1>Live Location Tracker</h1>
+  </div>
+
+  <!-- Google Map Embed -->
+  <div class="map-container">
+
+
+   
+    <iframe 
+      id="map"
+      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7563.493142560266!2d73.8885062963491!3d18.585460849427125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1732171811432!5m2!1sen!2sin" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <!-- Bottom Navigation Bar -->
+  <!-- <div class="bottom-nav">
+    <button id="find-location">Find My Location</button>
+    <button>Orders</button>
+    <button>Profile</button>
+  </div> -->
+
+  
+  <nav class="bottom-nav">
+    <a href="index2.html" class="nav-item">
+        <i   class="ri-home-4-line"></i>
+        <span class="nav-text"></span>
+    </a>
+    <a href="order.html" class="nav-item">
+        <i class="ri-upload-2-line"></i>
+        <span class="nav-text"></span>
+    </a>
+    <a href="track.html">
+        <i id="active" class="ri-map-pin-line"></i>
+    </a>
+    <a href="order-his.html" class="nav-item">
+        <i  class="ri-shopping-cart-line"></i>
+        <span class="nav-text"></span>
+    </a>
+    <a href="profile.html" class="nav-item">
+        <i class="ri-user-line"></i>
+        <span class="nav-text"></span>
+    </a>
+</nav>
+
+  <script>
+    // Function to get live location
+    document.getElementById("find-location").addEventListener("click", function () {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      } else {
+        alert("Geolocation is not supported by this browser.");
+      }
+    });
+
+    // Show position on the map
+    function showPosition(position) {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      const mapIframe = document.getElementById("map");
+      mapIframe.src = `https://www.google.com/maps/embed/v1/view?key=YOUR_API_KEY&center=${latitude},${longitude}&zoom=15`;
+    }
+
+    // Error handling
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          alert("User denied the request for Geolocation.");
+          break;
+        case error.POSITION_UNAVAILABLE:
+          alert("Location information is unavailable.");
+          break;
+        case error.TIMEOUT:
+          alert("The request to get user location timed out.");
+          break;
+        case error.UNKNOWN_ERROR:
+          alert("An unknown error occurred.");
+          break;
+      }
+    }
+  </script>
+</body>
+</html>

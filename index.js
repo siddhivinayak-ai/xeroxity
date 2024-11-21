@@ -302,6 +302,12 @@ if (window.location.pathname.includes('index2.html')) {
 
 
 
+document.querySelector('.profile-icon').addEventListener('click', () => {
+    window.location.href = 'profile.html';
+});
+
+
+
 
 
 
