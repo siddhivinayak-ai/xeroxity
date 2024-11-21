@@ -7,10 +7,10 @@ const editForm = document.getElementById("edit-form");
 // Pre-fill form with localStorage data if available
 const loadProfile = () => {
   const profile = JSON.parse(localStorage.getItem("profile")) || {
-    name: "John Doe",
+    name: "Siddhivinayak Waghmode ",
     role: "Customer",
-    address: "123, Street Name, City",
-    email: "johndoe@example.com",
+    address: "Vishrantwadi , Dhanori, Pune-15",
+    email: "siddhivinayakwaghmode2004@gmail.com",
     phone: "+91 1234567890",
   };
 
